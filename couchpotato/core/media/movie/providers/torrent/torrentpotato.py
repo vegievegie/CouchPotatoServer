@@ -16,7 +16,6 @@ class TorrentPotato(MovieProvider, Base):
         arguments = tryUrlencode({
             'user': host['name'],
             'passkey': host['pass_key'],
-            'imdbid': getIdentifier(media),
             'search' : getTitle(media) + ' ' + str(media['info']['year']),
         })
         return '%s?%s' % (host['host'], arguments)
